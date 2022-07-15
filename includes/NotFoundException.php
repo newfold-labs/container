@@ -1,9 +1,8 @@
 <?php
 
-namespace WP_Forge\Container;
+namespace NewfoldLabs\Container;
 
 use Exception;
-use Psr\Container\NotFoundExceptionInterface;
 
 /**
  * Class NotFoundException

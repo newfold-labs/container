@@ -1,6 +1,6 @@
 {
-  "name": "wp-forge/container",
-  "description": "A lightweight, PHP 5.4+ compatible, PSR-11 dependency injection container.",
+  "name": "newfold-labs/container",
+  "description": "A lightweight, PHP 7.0+ compatible, PSR-11 dependency injection container.",
   "type": "library",
   "license": "GPL-2.0-or-later",
   "authors": [
@@ -11,11 +11,10 @@
   ],
   "autoload": {
     "psr-4": {
-      "WP_Forge\\Container\\": "includes"
+      "NewfoldLabs\\Container\\": "includes"
     }
   },
   "require": {
-    "php": ">=7.0",
-    "psr/container": "^1.0"
+    "php": ">=7.0"
   }
 }
