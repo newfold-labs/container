@@ -6,7 +6,6 @@ use ArrayAccess;
 use Closure;
 use Countable;
 use Iterator;
-use Psr\Container\ContainerInterface;
 use SplObjectStorage;
 
 /**
