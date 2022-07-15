@@ -9,7 +9,7 @@ Basic manipulation of items.
 ```php
 <?php
 
-use WP_Forge\Container\Container;
+use NewfoldLabs\Container\Container;
 
 // Create a new instance
 $container = new Container();
@@ -32,7 +32,7 @@ Basic manipulation of items using array syntax.
 ```php
 <?php
 
-use WP_Forge\Container\Container;
+use NewfoldLabs\Container\Container;
 
 // Create a new instance
 $container = new Container();
@@ -55,7 +55,7 @@ Register a factory. Factories return a new class instance every time you fetch t
 ```php
 <?php
 
-use WP_Forge\Container\Container;
+use NewfoldLabs\Container\Container;
 
 // Create a new instance
 $container = new Container();
@@ -77,7 +77,7 @@ Register a service. Services return the same class instance every time you fetch
 ```php
 <?php
 
-use WP_Forge\Container\Container;
+use NewfoldLabs\Container\Container;
 
 // Create a new instance
 $container = new Container();
@@ -99,7 +99,7 @@ Register a computed value callback.
 ```php
 <?php
 
-use WP_Forge\Container\Container;
+use NewfoldLabs\Container\Container;
 
 $container = new Container( [
 	'first_name'  => 'John',
