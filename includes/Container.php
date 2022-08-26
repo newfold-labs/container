@@ -357,6 +357,7 @@ class Container implements ArrayAccess, ContainerInterface, Countable, Iterator 
 	 *
 	 * @throws NotFoundException  No entry was found for **this** identifier.
 	 */
+	#[\ReturnTypeWillChange]
 	public function current() {
 		return $this->offsetGet( $this->key() );
 	}
@@ -368,6 +369,7 @@ class Container implements ArrayAccess, ContainerInterface, Countable, Iterator 
 	 *
 	 * @return void Any returned value is ignored.
 	 */
+	#[\ReturnTypeWillChange]
 	public function next() {
 		++ $this->pointer;
 	}
@@ -379,6 +381,7 @@ class Container implements ArrayAccess, ContainerInterface, Countable, Iterator 
 	 *
 	 * @return string The entry identifier for the current entry.
 	 */
+	#[\ReturnTypeWillChange]
 	public function key() {
 		return $this->keys()[ $this->pointer ];
 	}
@@ -390,6 +393,7 @@ class Container implements ArrayAccess, ContainerInterface, Countable, Iterator 
 	 *
 	 * @return bool The return value will be cast to boolean and then evaluated.
 	 */
+	#[\ReturnTypeWillChange]
 	public function valid() {
 		return isset( $this->keys()[ $this->pointer ] );
 	}
@@ -401,6 +405,7 @@ class Container implements ArrayAccess, ContainerInterface, Countable, Iterator 
 	 *
 	 * @return void Any returned value is ignored.
 	 */
+	#[\ReturnTypeWillChange]
 	public function rewind() {
 		$this->pointer = 0;
 	}
@@ -414,6 +419,7 @@ class Container implements ArrayAccess, ContainerInterface, Countable, Iterator 
 	 *
 	 * @return bool True on success or false on failure.
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetExists( $offset ) {
 		return $this->has( $offset );
 	}
@@ -429,6 +435,7 @@ class Container implements ArrayAccess, ContainerInterface, Countable, Iterator 
 	 *
 	 * @throws NotFoundException  No entry was found for **this** identifier.
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetGet( $offset ) {
 		return $this->get( $offset );
 	}
@@ -443,6 +450,7 @@ class Container implements ArrayAccess, ContainerInterface, Countable, Iterator 
 	 *
 	 * @return void
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetSet( $offset, $value ) {
 		$this->set( $offset, $value );
 	}
@@ -458,6 +466,7 @@ class Container implements ArrayAccess, ContainerInterface, Countable, Iterator 
 	 *
 	 * @throws NotFoundException
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetUnset( $offset ) {
 		$this->delete( $offset );
 	}
@@ -469,6 +478,7 @@ class Container implements ArrayAccess, ContainerInterface, Countable, Iterator 
 	 *
 	 * @return int
 	 */
+	#[\ReturnTypeWillChange]
 	public function count() {
 		return count( $this->entries );
 	}
