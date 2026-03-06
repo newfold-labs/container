@@ -245,19 +245,19 @@ class Container implements ArrayAccess, ContainerInterface, Countable, Iterator 
 
 			// Replace factory object.
 			$this->factories->detach( $value );
-			$this->factories->attach( $extended );
+			$this->factories->offsetSet( $extended );
 
 		} else if ( $this->isService( $value ) ) {
 
 			// Replace service object.
 			$this->services->detach( $value );
-			$this->services->attach( $extended );
+			$this->services->offsetSet( $extended );
 
 		} else if ( $this->isComputed( $value ) ) {
 
 			// Replace function.
 			$this->functions->detach( $value );
-			$this->functions->attach( $extended );
+			$this->functions->offsetSet( $extended );
 
 		}
 
@@ -275,7 +275,7 @@ class Container implements ArrayAccess, ContainerInterface, Countable, Iterator 
 	 * @return Closure
 	 */
 	public function factory( Closure $closure ) {
-		$this->factories->attach( $closure );
+		$this->factories->offsetSet( $closure );
 
 		return $closure;
 	}
@@ -299,7 +299,7 @@ class Container implements ArrayAccess, ContainerInterface, Countable, Iterator 
 	 * @return Closure
 	 */
 	public function computed( Closure $closure ) {
-		$this->functions->attach( $closure );
+		$this->functions->offsetSet( $closure );
 
 		return $closure;
 	}
@@ -323,7 +323,7 @@ class Container implements ArrayAccess, ContainerInterface, Countable, Iterator 
 	 * @return Closure
 	 */
 	public function service( Closure $closure ) {
-		$this->services->attach( $closure );
+		$this->services->offsetSet( $closure );
 
 		return $closure;
 	}
