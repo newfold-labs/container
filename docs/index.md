@@ -1,3 +1,10 @@
+---
+name: container
+title: Documentation index
+description: Table of contents and quick links.
+updated: 2025-03-18
+---
+
 # newfold-labs/container – Documentation index
 
 Documentation for the Newfold container package, for **humans** and **AI agents**. Start here.

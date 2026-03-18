@@ -35,7 +35,7 @@ No test or lint scripts in this repo.
 
 ## Keeping documentation current
 
-**When you change code, features, or workflows, update the docs so they stay accurate.**
+**When you change code, features, or workflows, update the docs so they stay accurate.** Keep **docs/index.md** current: when you add, remove, or rename doc files, update the table of contents (and quick links if present).
 
 - Keep all docs current, not only the ones listed here.
 - Prefer updating the appropriate file(s) in **docs/** over leaving docs out of date.
